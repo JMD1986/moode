@@ -5,3 +5,5 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+moods = Mood.create([{ mood: "hyper"}, {mood: "happy"}, {mood: "angry"}, { mood: "chill"}, { mood: "turnt"}, {mood: "anxious"}, {mood: "sensual"}, {mood: "silly"}, {mood: "tired"}])

@@ -1,4 +1,4 @@
 var MoodCollection = Backbone.Collection.extend({
 	model: MoodModel,
-	url: ''
+	url: 'http://localhost:3000/moods'
 })

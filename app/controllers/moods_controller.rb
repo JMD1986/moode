@@ -5,10 +5,8 @@ class MoodsController < ApplicationController
   # GET /moods.json
   def index
     @moods = Mood.all
-    @playlist = PLaylist.all
-    @like = like.new
-    @comment = comment.new
-    render json:
+
+    render json: @moods
   end
 
   # GET /moods/1

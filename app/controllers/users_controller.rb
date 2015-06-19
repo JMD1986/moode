@@ -4,13 +4,13 @@ class UsersController < ApplicationController
   # GET /users
   # GET /users.json
   def index
-    @users = User.all
+    render json: User.all
   end
 
   # GET /users/1
   # GET /users/1.json
   def show
-    @playlists = Playlist.all
+    render json: @playlists = Playlist.all
   end
 
   # GET /users/new

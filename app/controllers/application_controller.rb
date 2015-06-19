@@ -22,7 +22,6 @@ class ApplicationController < ActionController::Base
       redirect_to login_path
     end#unless
   end#authenticate_user
-
 end#class
 
 end

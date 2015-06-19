@@ -1,4 +1,6 @@
 var containerEl =  document.querySelector('#container');
+var Moods = new MoodCollection();
+Moods.fetch();
 
 /* global Backbone React */
 var App = Backbone.Router.extend({
@@ -36,7 +38,7 @@ var App = Backbone.Router.extend({
     moods: function() {
         console.log('moods')
         React.render(
-            <Moods/>,
+            <Moods moods ={Moods}/>,
             containerEl
         );
     },

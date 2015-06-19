@@ -4,5 +4,5 @@ var MoodModel = Backbone.Model.extend({
 		_id:''
 	},
 	idAttribute: '_id',
-	urlRoot: ''
+	urlRoot: 'http://localhost:3000/moods'
 })

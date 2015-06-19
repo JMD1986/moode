@@ -8,6 +8,7 @@ class MoodsController < ApplicationController
     @playlist = PLaylist.all
     @like = like.new
     @comment = comment.new
+    render json:
   end
 
   # GET /moods/1

@@ -11,10 +11,3 @@ moods = Mood.create([{ mood: "hyper"}, {mood: "happy"}, {mood: "angry"}, { mood:
 
 playlists = Playlist.create([{ user: "John", title: "Turned up", url: "https://soundcloud.com/brainfeeder/thundercat-them-changes", mood_id: 1}])
 
-
-
-password = Faker::Internet.password
-
-
-comment = Comment.create(user_id: user.id, link_id: link.id,
-                            text: Faker::Lorem.paragraph(2))

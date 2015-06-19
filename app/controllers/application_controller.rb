@@ -6,22 +6,4 @@ class ApplicationController < ActionController::Base
   def index
   end
 
-  def current_user
-    if @current_user.nil?
-      if session[:user_id].present?
-        @current_user = User.find(session[:user_id])
-      end#if
-    else
-      @current_user
-    end#if
-  end#current_user
-
-  def authenticate_user!
-    unless current_user
-      flash[:alert] = "please log in"
-      redirect_to login_path
-    end#unless
-  end#authenticate_user
-end#class
-
 end

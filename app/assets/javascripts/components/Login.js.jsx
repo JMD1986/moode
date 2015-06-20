@@ -22,7 +22,10 @@ var Login = React.createClass({
   		password: this.refs.password.getDOMNode.value
   	});
 
-    app.navigate('#moods/1', {trigger:true});
+    // if(login.get('username') !=== null && login.get('password') !== null ){
+    //   console.log('true')
+    }
+    // app.navigate('#moods/1', {trigger:true});
   	// if(login.isValid()){
   	// 	console.log(login.validationError);
    //      // 
@@ -31,5 +34,4 @@ var Login = React.createClass({
   	// 	console.log(login.validationError);
     
   	// }
-  }
 });

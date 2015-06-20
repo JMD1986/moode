@@ -1,0 +1,117 @@
+
+$gutter-width: 1.7%;
+$total: 1140px;
+$column-width: 6.7%;
+$global: 100%;
+
+
+ @mixin grid ($number-of-columns) {
+  width: ($column-width * $number-of-columns) + (($number-of-columns - 1) * $gutter-width);
+}
+
+
+
+
+
+
+.container {
+  width: 100%;
+  background: #fdf3e7;
+  height: 1140px;
+  overflow:hidden;
+  margin: auto 0;
+
+  
+  
+}
+.row {
+  width: 90%;
+
+}
+
+.col1,.col2,.col3,.col4,.col5,.col6,.col7,.col8,.col9{
+  margin-right: $gutter-width;
+  box-sizing: border-box;
+  text-align:center;
+  width: 100%;
+  
+  
+}
+
+
+
+@media screen and (min-width:400px){
+  .container {
+  background-color: #fdf3e7;
+  }
+  .row { text-align:center;
+         float:left;
+        
+    
+          
+  }
+  
+  .col1,.col2,.col3,.col4,.col5,.col6,.col7,.col8,.col9{
+ 
+  float:left;
+  
+}
+.col1 { 
+  background: blue;
+  @include grid(1);
+ 
+  
+}
+.col6 {
+  background:#fdf3e7;
+  @include grid(6);
+  
+}
+.col2 {
+  
+  background:pink;
+  @include grid(2);
+  
+}
+.col4 {
+  background:pink;
+  @include grid(4);
+ 
+}
+
+.col3 {
+  background: aqua;
+  @include grid(3);
+  
+}
+.col5 {
+  background: aqua;
+  @include grid(5);
+  
+}
+.col7 {
+  background: blue;
+  @include grid(7);
+
+}
+
+.col8 {
+  background: blue;
+  @include grid(8);
+
+}
+.col9 {
+  background: green;
+  @include grid(9);
+}
+
+  
+  
+     
+  
+}
+
+.row div:last-child {
+      margin-right: 0; 
+      background: orange;
+}

@@ -19,6 +19,14 @@ var Moods = React.createClass({
 
 	render: function(){
 
+<<<<<<< HEAD
+	
+		return(
+			<h1>Moods {slug}</h1>
+		);
+	}
+})
+=======
   		moodlist =  this.state.moodHolder.map(function(model){
         return(
           <a key={model.id} href={'#playlist/'+ model.mood} className="mona-box">
@@ -46,3 +54,4 @@ var Moods = React.createClass({
   },
 
 })
+>>>>>>> 2f7d1b47eabf2dfcd25c650b4f63d13afd2545c6

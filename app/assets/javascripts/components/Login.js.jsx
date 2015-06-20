@@ -1,7 +1,15 @@
 var Login = React.createClass({
   render: function () {
     return (
+      <div>
     	<form onSubmit={this.formSubmitted}>
+
+        <div className="container">
+        <div className="main-header">
+          <h2>Moode</h2>
+        </div>
+    		<h1 className="log">Login</h1>
+
       <button>Sign Up</button>
     		<h1>Login</h1>
     		<label>Username</label><br/>
@@ -9,7 +17,9 @@ var Login = React.createClass({
     		<label>Password</label><br/>
     		<input ref="password" type="password" placeholder="Enter password"/><br/>
     		<button>Submit</button>
+        </div>
     	</form>
+      </div>
     );
   },
   formSubmitted: function (e){

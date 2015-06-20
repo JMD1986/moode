@@ -21,7 +21,7 @@ playlists = Playlist.create(
   [{ user: "John", title: "Turned up", url: "https://soundcloud.com/maddecent/sets/jeffrees-vol-6", mood_id: 1},
   { user: "John", title: "the house that funk built" , url: "https://soundcloud.com/joshua-kong/sets/chillstep" , mood_id: 2},
   { user: "John", title: "Ayy Lmao", url: "https://soundcloud.com/sarbs/sets/comedy-bang-bang" },
-  { user: "Ramona", title: "Coding mix", url: "https://soundcloud.com/victoria-feere/sets/coding-mix", mood_id: 6}
+  { user: "Ramona", title: "Coding mix", url: "https://soundcloud.com/victoria-feere/sets/coding-mix", mood_id: 6},
   { user: "Romona" , title: "May 2015 Austin Spring relaxation", url: "https://soundcloud.com/celestial_vibes/sets/summer-vibes-v2", mood_id: 3},
   { user: "Tito" , title: "June good times playlist", url: "https://soundcloud.com/ngryullet/sets/reggae", mood_id:5},
   { user: "Tito", title: "I need a laugh", url: "https://soundcloud.com/mazemerizer", mood_id: 6},

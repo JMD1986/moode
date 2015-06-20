@@ -4,11 +4,7 @@ var Moods = React.createClass({
 	var url = window.location.href;
   	slug = url.split('/').pop();
 
-	var moodElements = this.props.moods.map(function(model){
-			return( <li key={model.id}>
-						<a href={model.get('name')}</a>
-					</li>)
-		});
+	
 		return(
 			<h1>Moods {slug}</h1>
 		);

@@ -13,6 +13,22 @@
  *= require_tree .
  *= require_self
  */
- .firstname{
- 	color: red;
- }
+
+
+ @import '_reset';
+ @import '_mixin';
+
+
+// Global-moblie //
+body {
+
+	background: #fdf3e7;
+	font-family: helvetica, sans-serif;
+
+}
+ 
+
+.main-header h2 {
+
+	font-family: "sails", helvetica, sans-serif;
+}

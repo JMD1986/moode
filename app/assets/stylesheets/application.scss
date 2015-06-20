@@ -13,6 +13,36 @@
  *= require_tree .
  *= require_self
  */
- .firstname{
- 	color: red;
+
+
+
+ @import '_reset';
+ @import '_mixin';
+
+
+// Global-moblie //
+body {
+
+	background: #fdf3e7;
+	font-family: helvetica, sans-serif;
+
+}
+ 
+
+.main-header h2 {
+
+	font-family: "sails", helvetica, sans-serif;
+}
+
+ .mona-box{
+ 	width: 100px;
+ 	height: 100px;
+ 	border: 1px solid black;
+ 	margin: 10px;
+ 	float: left;
  }
+
+ .mona-box:nth-child(3n+4){
+ 	 clear: both;
+ }
+

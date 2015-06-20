@@ -1,12 +1,5 @@
 var Playlist = React.createClass({
-<<<<<<< HEAD
 
-  render: function () {
-  	var url = window.location.href;
-  	slug = url.split('/').pop();
-
-
-=======
 	getInitialState: function(){
 		return{
 			playlistCollection: []
@@ -40,7 +33,7 @@ var Playlist = React.createClass({
   				</div>
   			);
   		})
->>>>>>> 2f7d1b47eabf2dfcd25c650b4f63d13afd2545c6
+
     return (
       <div>
       	<h1>Playlist Channel</h1>

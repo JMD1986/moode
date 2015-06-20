@@ -24,7 +24,7 @@ playlists = Playlist.create(
   { user: "Ramona", title: "Coding mix", url: "https://soundcloud.com/victoria-feere/sets/coding-mix", mood_id: 6},
   { user: "Romona" , title: "May 2015 Austin Spring relaxation", url: "https://soundcloud.com/celestial_vibes/sets/summer-vibes-v2", mood_id: 3},
   { user: "Tito" , title: "June good times playlist", url: "https://soundcloud.com/ngryullet/sets/reggae", mood_id:5},
-  { user: "Tito", title: "I need a laugh", url: "https://soundcloud.com/mazemerizer", mood_id: 6},
+  { user: "Tito", title: "I need a laugh", url: "https://soundcloud.com/mazemerizer/sets/standup", mood_id: 6},
   { user: "Ramona", title: "Night time tunes", url: "https://soundcloud.com/reecerance/sets/ambient-music"}])
 
 users = User.create([{ name: "John", email: "John@John.com", password_digest: "hello"}, {name: "Romona", email: "Ramona@rramona.com", password_digest: "hello"}, {name: "Tito", email: "Tito@ilikebigbutts.org", password_digest: "hello"}, {name: "Summer", email: "summer@google.com", password_digest: "hello"}, {name: "David", email: "David@hotmail.org", password_digest: "hello"}])

@@ -1,6 +1,7 @@
 var containerEl =  document.querySelector('#container');
-var Moods = new MoodCollection();
-Moods.fetch();
+// var MoodsCollection = new MoodCollection();
+// MoodsCollection.fetch();
+// console.log(MoodsCollection);
 
 /* global Backbone React */
 var App = Backbone.Router.extend({
@@ -15,35 +16,32 @@ var App = Backbone.Router.extend({
 
     },
     home: function() {
-        console.log('home')
         React.render(
             <Home/>,
             containerEl
         );
     },
     login: function() {
-        console.log('login')
+     
         React.render(
            <Login/>,
             containerEl
         );
     },
     signup: function() {
-        console.log('signup')
+       
         React.render(
             <Signup/>,
             containerEl
         );
     },
     moods: function() {
-        console.log('moods')
         React.render(
-            <Moods moods ={Moods}/>,
+            <Moods/>,
             containerEl
         );
     },
     playlist: function() {
-        console.log('playlist')
         React.render(
            <Playlist/>,
             containerEl
@@ -56,10 +54,10 @@ var App = Backbone.Router.extend({
             containerEl
         );
     },
-    soundcloud: function(){
+    userplaylist: function(){
         console.log('userplaylist')
         React.render(
-            <Userplaylist/>,
+            <UserPlaylist/>,
             containerEl
         );
     }

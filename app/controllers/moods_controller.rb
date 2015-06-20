@@ -12,8 +12,7 @@ class MoodsController < ApplicationController
   # GET /moods/1
   # GET /moods/1.json
   def show
-    @mood = mood.find(params[:id])
-    @playlist = playlist.all.sort_by
+    render json: @moods = Mood.find(params[:id])
   end
 
 

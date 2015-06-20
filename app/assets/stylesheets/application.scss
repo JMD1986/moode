@@ -13,7 +13,7 @@
  *= require_tree .
  *= require_self
  */
-<<<<<<< HEAD:app/assets/stylesheets/application.scss
+
 
 
  @import '_reset';
@@ -33,7 +33,7 @@ body {
 
 	font-family: "sails", helvetica, sans-serif;
 }
-=======
+
  .mona-box{
  	width: 100px;
  	height: 100px;
@@ -45,4 +45,4 @@ body {
  .mona-box:nth-child(3n+4){
  	 clear: both;
  }
->>>>>>> 2f7d1b47eabf2dfcd25c650b4f63d13afd2545c6:app/assets/stylesheets/application.css
+

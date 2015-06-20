@@ -2,7 +2,7 @@ var UserModel = Backbone.Model.extend({
 	defaults:{
 		_id: '',
 		email: null,
-		password_digest: null,
+		password: null,
 		created_At: null,
 		updated_At: null
 	},

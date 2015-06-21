@@ -1,7 +1,33 @@
 var Profile = React.createClass({
+	getInitialState: function(){
+		return{
+			userCollection: []
+		}
+	},
+	componentDidMount: function(){
+		$.get('/users', function(models){
+				if(this.isMounted()){
+					this.setState({
+						userCollection: models
+					});			
+				}
+		}.bind(this));
+	},
     render: function () {
-
-    	
+    		var url = window.location.href;
+  			var query = url.split('/').pop();
+  		
+  			userImages = this.state.userCollection.map(function(model){
+  				var string = model.name +'';
+				console.log(string);	
+					console.log(query);
+				if(string === query)
+					{
+						return(
+								<div><img src={model.imageurl}/></div>
+							)
+					}					
+	  		})   	
         return (
           <div>
           <div className="profile-container">
@@ -11,7 +37,7 @@ var Profile = React.createClass({
   			</div>
 
   			<div className="picture-container">
-  				<img src="http://www.fillmurray.com/200/300"/>
+  				{userImages}
 	  			</div>
 
 	  			<div className="bottom-container">

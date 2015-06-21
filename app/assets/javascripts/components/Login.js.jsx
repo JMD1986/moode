@@ -8,65 +8,28 @@ var Login = React.createClass({
     //  window.removeEventListener("hashchange", this.fadeIn);
   },
   render: function () {
-    var divStyle ={
-      display: 'none'
-    }
+
     return (
 
-
-      <div>
-      <div className="login-header">
-      <h1>Moode</h1>
+      <div className="Big-Div">
+         <div className="login-header">
+            <h1>Moode</h1>
+          </div>
+          <form onSubmit={this.formSubmitted} ref="test">                   
+              <div className="main-header">    
+                <h2>Login</h2>
+              </div>        
+             
+              <fieldset className="account-info">
+                    <h1 >Login</h1>
+                    <label>Username</label><br/>
+                    <input ref="user" type="text" placeholder="Enter username..."/><br/>
+                    <label>Password</label><br/>
+                    <input ref="password" type="password" placeholder="Enter password"/><br/>
+                       <button>Submit</button>                      
+              </fieldset>
+           </form>
       </div>
-    	<form onSubmit={this.formSubmitted}>
-
-      <div >
-    	<form onSubmit={this.formSubmitted} ref="test" >
-
-
-      <div >
-    	<form onSubmit={this.formSubmitted} ref="test" >
-
-
-        <div className="container-main">
-        <div className="main-header">
-        
-          <h2>Login</h2>
-       
-        </div>
-        
-    		<h1 className="log">Login</h1>
-
-
-
-      <button>Sign Up</button>
-    		
-        <fieldset className="account-info">
-    		<label>Username</label>
-    		<input ref="user" type="text" placeholder="Enter username..."/>
-    		<label>Password</label>
-        </fieldset>
-        <fieldset className="account-info">
-    		<input ref="password" type="password" placeholder="Enter password"/>
-        <label>Password Confirmation</label>
-        <input ref="password2" type="password" placeholder="Enter password"/>
-
-
-      <button  >Sign Up</button>
-    		<h1 >Login</h1>
-    		<label>Username</label><br/>
-    		<input ref="user" type="text" placeholder="Enter username..."/><br/>
-    		<label>Password</label><br/>
-    		<input ref="password" type="password" placeholder="Enter password"/><br/>
-
-
-
-    		<button>Submit</button>
-        </fieldset>
-        </div>
-    	</form>
-      </div>
-
     );
   },
   formSubmitted: function (e){

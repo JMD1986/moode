@@ -6,7 +6,7 @@ var containerEl =  document.querySelector('#container');
 /* global Backbone React */
 var App = Backbone.Router.extend({
     routes: {
-        '':                     'home',
+        '':                     'login',
         'login':                'login',
         'signup':               'signup',
         'moods/:category':      'moods',

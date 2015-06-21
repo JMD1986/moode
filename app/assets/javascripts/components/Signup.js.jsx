@@ -33,7 +33,7 @@ var Signup = React.createClass({
   
       if(signup.isValid()){
           console.log(signup.validationError);
-         $.post('/signup', 
+         $.post('/users', 
             { name: signup.get('name'), 
               email: signup.get('email'), 
               password: signup.get('password'),
@@ -42,12 +42,12 @@ var Signup = React.createClass({
       }
       else{
          console.log(signup.validationError);
-          $.post('/signup', 
-            { name: signup.get('name'), 
-              email: signup.get('email'), 
-              password: signup.get('password'),
-              password_confirmation: signup.get('password'),
-            });
+          // $.post('/user', 
+          //   { name: signup.get('name'), 
+          //     email: signup.get('email'), 
+          //     password: signup.get('password'),
+          //     password_confirmation: signup.get('password'),
+          //   });
       }
     }
 

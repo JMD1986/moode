@@ -29,7 +29,7 @@ var Signup = React.createClass({
           name: this.refs.name.getDOMNode().value,
           email: this.refs.email.getDOMNode().value
     });
-
+       console.log('test' +signup.get('name'))
   
       if(signup.isValid()){
           console.log(signup.validationError);
@@ -37,7 +37,7 @@ var Signup = React.createClass({
             { name: signup.get('name'), 
               email: signup.get('email'), 
               password: signup.get('password'),
-              password_confirmation: signup.get('password'),
+              password_confirmation: signup.get('password')
             });
       }
       else{

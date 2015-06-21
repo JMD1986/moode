@@ -51,7 +51,7 @@ var Login = React.createClass({
           name: login.get('name'), 
           password: login.get('password')
       });
-      // app.navigate('#moods/categories', {trigger: true});
+      app.navigate('#moods/categories', {trigger: true});
     }
     else{
       $.get('/logn', function(error){

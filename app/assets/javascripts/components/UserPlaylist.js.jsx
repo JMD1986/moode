@@ -14,14 +14,18 @@ var UserPlaylist = React.createClass({
 		}.bind(this));
 	},
 	render: function (){
-		// var url = window.location.href;
-  // 		slug = url.split('/').pop();
-		playlists = this.state.playlistCollection.map(function(model){
-			return(
-				<div key={model.id}><iframe id="sc-widget" src={'https://w.soundcloud.com/player/?url='+model.url} width="400" height="465" scrolling="no" frameBorder="no"></iframe></div>
-				)
-		});
+  			var url = window.location.href;
+  			var query = url.split('/').pop();
 
+		playlists = this.state.playlistCollection.map(function(model){
+
+			if(query === model.title){
+				return(
+					<div key={model.id}><iframe id="sc-widget" src={'https://w.soundcloud.com/player/?url='+model.url} width="400" height="465" scrolling="no" frameBorder="no"></iframe></div>
+					)
+			}
+		});
+			
 		return(
 			<div>
 			<div></div>

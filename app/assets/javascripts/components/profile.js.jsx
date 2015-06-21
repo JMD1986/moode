@@ -1,6 +1,10 @@
 var Profile = React.createClass({
     render: function () {
+<<<<<<< HEAD
     	console.log('what?')
+=======
+    	console.log('true');
+>>>>>>> master
         return (
           <div>
           <div className="profile-container">

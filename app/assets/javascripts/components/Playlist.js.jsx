@@ -3,6 +3,7 @@ var Playlist = React.createClass({
 	getInitialState: function(){
 		return{
 			playlistCollection: []
+			
 		}
 	},
 	componentDidMount: function(){

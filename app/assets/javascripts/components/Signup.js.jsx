@@ -2,7 +2,12 @@ var Signup = React.createClass({
 
   render: function () {
     return (
-      <form onSubmit={this.formSubmitted}>
+      <div>
+      <div className="login-header">
+      <h1>Sign up!</h1>
+      </div>
+      <form  className="sign-up-container" onSubmit={this.formSubmitted}>
+
         <h1>Sign Up</h1>
 
         <fieldset className="account-info">
@@ -12,21 +17,29 @@ var Signup = React.createClass({
         </fieldset>
 
 
+          
+
         <fieldset className="account-info">
         <input  ref="email" type="text" placeholder="Enter email.."/>
         <label>Username</label>
         <input ref="user" type="text" placeholder="Enter username.."/>
         <label>Password</label>
         </fieldset>
+        
 
-        <fieldset className="account-info">
         <input ref="pass"type="password" placeholder="Enter password.."/>
         <label>Confirm Password</label>
         <input ref="pass2"type="password" placeholder="Confirm password.."/>
-        </fieldset>
+      
+     
 
         <button>Submit</button>
+
+     
+      
       </form>
+      </div>
+
     );
 
   },

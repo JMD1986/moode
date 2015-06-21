@@ -27,16 +27,23 @@ playlists = Playlist.create(
   { user: "Tito", title: "I need a laugh", url: "https://soundcloud.com/mazemerizer/sets/standup", mood_id: 8},
   { user: "Ramona", title: "Night time tunes", url: "https://soundcloud.com/reecerance/sets/ambient-music", mood_id: 9}])
 
-users = User.create([{ name: "John", email: "Johndaugherty1986@gmail.com",  imageurl: "http://i.imgur.com/tciLfzQ.jpg"},
+users = User.create([{ name: "John", email: "Johndaugherty1986@gmail.com", imageurl: "http://i.imgur.com/tciLfzQ.jpg"},
   {name: "Romona", email: "bellamy2727@yahoo.com",  imageurl: "http://i.imgur.com/5A95Faw.jpg"},
   {name: "Tito", email: "Tito@ilikebigbutts.org", imageurl: "http://i.imgur.com/4PgOxLr.jpg"},
   {name: "Nikola Tesla", email: "Ilovescience@electricityisdope.com", imageurl:"http://www.teslasociety.com/pictures/pic1.jpg"}])
 
-81.times do
+100.times do
 
 playlists = Playlist.create([{user: Faker::Name.name, mood_id: rand(1..9),
                     url: "https://soundcloud.com/jordan-myers-22/sets/js-playlist",
-                    title: Faker::Lorem.sentence(1)}])
-users = User.create([{ name: Faker::Name.name, email: Faker::Internet.email, password_digest: "hello"}, {name: "Romona", email: "Ramona@rramona.com", password_digest: "hello"}, {name: "Tito", email: "Tito@ilikebigbutts.org", password_digest: "hello"}, {name: "Summer", email: "summer@google.com", password_digest: "hello"}, {name: "David", email: "David@hotmail.org", password_digest: "hello"}])
+                    title: Faker::Lorem.sentence(1)
+          }])
+
+users = User.create([{
+  name: Faker::Name.name,
+  email: Faker::Internet.email,
+  password_digest: "hello",
+  bio: Faker::Lorem.paragraph(9),
+  imageurl: "http://i.imgur.com/J9fQX9e.jpg"}])
 
 end

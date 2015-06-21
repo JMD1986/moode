@@ -21,7 +21,7 @@ var Moods = React.createClass({
 
   		moodlist =  this.state.moodHolder.map(function(model){
         return(
-          <a key={model.id} href={'#playlist/'+ model.mood} className="mona-box">
+          <a key={model.id} href={'#playlist/'+ model.id} className="mona-box">
               <div >
                   <div >
                       {model.mood}

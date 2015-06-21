@@ -1,8 +1,19 @@
 var Login = React.createClass({
+  componentDidMount: function() {
+    window.addEventListener('load', this.fadeIn);
+    window.addEventListener("hashchange", this.fadeIn);
+  },
+  componentWillUnmount: function() {
+    window.removeEventListener('load', this.fadeIn);
+     window.removeEventListener("hashchange", this.fadeIn);
+  },
   render: function () {
+    var divStyle ={
+      display: 'none'
+    }
     return (
-      <div>
-    	<form onSubmit={this.formSubmitted}>
+      <div >
+    	<form onSubmit={this.formSubmitted} ref="test" style={divStyle}>
 
         <div className="container">
         <div className="main-header">
@@ -10,8 +21,8 @@ var Login = React.createClass({
         </div>
     		<h1 className="log">Login</h1>
 
-      <button>Sign Up</button>
-    		<h1>Login</h1>
+      <button  >Sign Up</button>
+    		<h1 >Login</h1>
     		<label>Username</label><br/>
     		<input ref="user" type="text" placeholder="Enter username..."/><br/>
     		<label>Password</label><br/>
@@ -38,12 +49,16 @@ var Login = React.createClass({
 
     if(login.isValid()){
       console.log(login.validationError);
-      // $.post('/users/new', { username: login.get('username'), password: login.get('password'), password: login.get('password')  });
+      $.post('/users/new', { username: login.get('username'), password: login.get('password'), password: login.get('password')  });
       app.navigate('#moods/categories', {trigger: true});
     }
     else{
        console.log(login.validationError);
     }
     
-  	 }
+  },
+  fadeIn: function(e){
+    e.preventDefault();
+      $(this.refs.test.getDOMNode()).fadeIn('10000');
+  }
 });

@@ -48,14 +48,12 @@ var App = Backbone.Router.extend({
         );
     },
     profile: function() {
-        console.log('profile')
         React.render(
            <Profile/>,
             containerEl
         );
     },
     userplaylist: function(){
-        console.log('userplaylist')
         React.render(
             <UserPlaylist/>,
             containerEl

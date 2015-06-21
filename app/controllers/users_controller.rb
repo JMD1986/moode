@@ -13,7 +13,7 @@ class UsersController < ApplicationController
 
 
   def create
-    @user = User.create(user_params)
+    @user = User.new(email: params[:email], email: params[:email], password: params[:password], password_confirmation: params[:password_confirmation] )
 
     respond_to do |format|
       if @user.save

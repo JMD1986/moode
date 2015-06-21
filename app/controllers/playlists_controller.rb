@@ -1,6 +1,6 @@
 class PlaylistsController < ApplicationController
   before_action :set_playlist, only: [:show, :edit, :update, :destroy]
-
+  skip_before_action :verify_authenticity_token
   def index
     @playlists = Playlist.all
     render json: @playlists

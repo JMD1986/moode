@@ -13,11 +13,16 @@ var Login = React.createClass({
     }
     return (
 
+
       <div>
       <div className="login-header">
       <h1>Moode</h1>
       </div>
     	<form onSubmit={this.formSubmitted}>
+
+      <div >
+    	<form onSubmit={this.formSubmitted} ref="test" >
+
 
       <div >
     	<form onSubmit={this.formSubmitted} ref="test" >
@@ -33,6 +38,7 @@ var Login = React.createClass({
     		<h1 className="log">Login</h1>
 
 
+
       <button>Sign Up</button>
     		
         <fieldset className="account-info">
@@ -45,12 +51,15 @@ var Login = React.createClass({
         <label>Password Confirmation</label>
         <input ref="password2" type="password" placeholder="Enter password"/>
 
+
       <button  >Sign Up</button>
     		<h1 >Login</h1>
     		<label>Username</label><br/>
     		<input ref="user" type="text" placeholder="Enter username..."/><br/>
     		<label>Password</label><br/>
     		<input ref="password" type="password" placeholder="Enter password"/><br/>
+
+
 
     		<button>Submit</button>
         </fieldset>

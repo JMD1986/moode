@@ -15,9 +15,11 @@ var Profile = React.createClass({
 	},
     render: function () {
 
+
     	
     	console.log('true');
 		
+
 
     		var url = window.location.href;
   			var query = url.split('/').pop();

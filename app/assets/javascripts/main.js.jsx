@@ -8,7 +8,6 @@ var App = Backbone.Router.extend({
     routes: {
 
         '':                     'login',
-        '':                     'login',
         'login':                'login',
         'signup':               'signup',
         'moods/:category':      'moods',

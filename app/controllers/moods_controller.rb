@@ -4,15 +4,15 @@ class MoodsController < ApplicationController
   # GET /moods
   # GET /moods.json
   def index
-    @moods = Mood.all
+    @moods = Mood.all.select(9)
 
     render json: @moods
   end
 
-  # GET /moods/1
-  # GET /moods/1.json
+
   def show
-    render json: @moods = Mood.find(params[:id])
+    @playlists = Playlist.where(mood_id: params[:id]).limit(9)
+    render json: @playlists
   end
 
 

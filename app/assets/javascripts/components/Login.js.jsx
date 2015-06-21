@@ -55,6 +55,10 @@ var Login = React.createClass({
       // app.navigate('#moods/categories', {trigger: true});
     }
     else{
+      $.get('/logn', function(error){
+         console.log(error);
+         });
+      
        console.log(login.validationError);
     }
 

@@ -24,8 +24,9 @@
 body {
 
 	background: #fdf3e7;
-	font-family: helvetica, sans-serif;
-
+    font-family: "source-sans-pro",sans-serif;
+	font-style: italic;
+	font-weight: 400;
 }
  
 
@@ -84,13 +85,17 @@ body {
 	font-family: "sails", helvetica, sans-serif;
 }
 
+.picture-container{
+	 border: 1px solid #eeeeee;
+}
 .picture-container img {
 
-  border-radius: 50%;
-  height: 250px;
-  max-width: 500px;
-  margin-top: 100px;
-  margin-left: 45%;
+  // border-radius: 100%;
+
+  // height: 250px;
+  // max-width: 500px;
+  // margin-top: 100px;
+  // margin-left: 45%;
 
 
 }
@@ -103,7 +108,7 @@ body {
 
 .bottom-left-container {
 	max-width: 50%;
-	margin-top: 70px;
+	margin-top: 80px;
 	margin-left: 5%;
 }
 
@@ -139,5 +144,133 @@ body {
 
 
 // **footer User Profile **//
+
+
+
+
+
+
+// ** Login In/Sign up page ** //
+.login-header {
+	max-width:100%;
+	height: 150px;
+	background:  #c63d0f;
+
+}
+.login-header h1 {
+	text-align: center;
+	font-size: 4em;
+}
+
+.container-main {
+	max-width: 100%;
+	background: #3b3738;
+}
+
+.main-header {
+
+   max-width: 100%;
+   height: 150px;
+   background: #c63d0f;
+
+}
+
+
+
+.sign-up-container {
+	max-width:100%;
+	height: 231px;
+	background: #c63d0f;
+}
+
+
+
+
+
+form {
+
+  margin-left: 30%;
+  border: 1px solid #3b3738;
+  border-radius: 5px;
+  font-family: "source-sans-pro",sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  overflow: hidden;
+  width: 45%;
+  margin-top: 300px;
+  color: #c63d0f;
+
+
+
+
+}
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+input {
+
+  border-radius: 5px;
+  font: 14px/1.4 "source-sans-pro", Helvetica, Arial, sans-serif;
+  margin: 0 auto;
+}
+
+.account-info label {
+  color: #395870;
+  display:block;
+  font-weight: bold;
+  
+}
+.account-info input {
+  background: #fff;
+  border: 1px solid #c6c7cc;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, .1);
+  color: #636466;
+  width: 100%;
+}
+.account-action {
+  background: #f0f0f2;
+  border-top: 1px solid #c6c7cc;
+  
+}
+.account-action .btn {
+  background: linear-gradient(#49708f, #293f50);
+  border: 0;
+  color: #fff;
+  cursor: pointer;
+  font-weight: bold;
+  float: left;
+  
+}
+.account-action label {
+  color: #7c7c80;
+  font-size: 12px;
+  float: left;
+  margin: 10px 0 0 20px;
+}
+
+// *****************//
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 

@@ -1,10 +1,8 @@
 var Profile = React.createClass({
     render: function () {
-<<<<<<< HEAD
-    	console.log('what?')
-=======
+    	
     	console.log('true');
->>>>>>> master
+		
         return (
           <div>
           <div className="profile-container">
@@ -48,9 +46,7 @@ var Profile = React.createClass({
 
 
 		  </div>
-		  <footer>
-		  </footer>
-
+		
 
 
             

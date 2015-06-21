@@ -26,7 +26,9 @@ var UserPlaylist = React.createClass({
 			<div>
 			<div></div>
 			<h1>User Playlist</h1>
-
+			<div className="box">
+			<p>words</p>
+			</div>
 				{playlists}	
 				
 			</div>

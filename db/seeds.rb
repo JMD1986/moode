@@ -6,15 +6,15 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-moods = Mood.create([{mood: "Happy", url: "http://straightfromthea.com/wp-content/uploads/2009/03/image_8515360.jpg"},
+moods = Mood.create([{mood: "Happy", url: "http://streetdose.com/wp-content/uploads/2012/10/drake-smiling-after-graduating-high-school.jpg"},
   {mood: "Confused", url: "http://replygif.net/thumbnail/1322.gif"},
   {mood: "Angry", url: "http://myspiltmilk.com/sites/default/files/main-image/lewisblack_0.jpg"},
   {mood: "Relaxed", url: "http://www.greatamericanthings.net/wp-content/uploads/2012/03/Buffett-by-sweetslyricsdotcom.jpg"},
   {mood: "Turnt", url: "http://exytmusic.com/wp-content/uploads/2014/04/LilJon-1016x1024.jpg"},
-  {mood: "Anxious", url: "http://replygif.net/thumbnail/1322.gif"},
+  {mood: "Anxious", url: "http://cdn.ustatik.com/_img/columns/Jonathan-Davis.jpg"},
   {mood: "Sensual", url: "http://thatgrapejuice.net/wp-content/uploads/HLIC/6229c55fb7ed72fef88d35caacf46d2c.jpg"},
-  {mood: "Humorous", url: "http://www.comedymoontower.com/wp-content/uploads/2012/02/Audience-Laughing.jpg"},
-  {mood: "Tired", url: "http://www.godhungry.org/wp-content/uploads/2015/05/tired-lady.jpg"}])
+  {mood: "Humorous", url: "http://www.cheekycomedy.co.uk/images-2007-july17th/comedy-audience1.jpg"},
+  {mood: "Tired", url: "https://c2.staticflickr.com/8/7310/8729154647_731ffd7576_b.jpg"}])
 #password?!!
 
 playlists = Playlist.create(
@@ -36,7 +36,8 @@ users = User.create([{ name: "John", email: "Johndaugherty1986@gmail.com", image
 
 playlists = Playlist.create([{user: Faker::Name.name, mood_id: rand(1..9),
                     url: "https://soundcloud.com/jordan-myers-22/sets/js-playlist",
-                    title: Faker::Lorem.sentence(1)
+                    title: Faker::Lorem.sentence(1),
+                    imageurl: "http://i.imgur.com/5063SUw.png"
           }])
 
 users = User.create([{

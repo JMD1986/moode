@@ -13,7 +13,7 @@ var Login = React.createClass({
     }
     return (
       <div >
-    	<form onSubmit={this.formSubmitted} ref="test" style={divStyle}>
+    	<form onSubmit={this.formSubmitted} ref="test" >
 
         <div className="container">
         <div className="main-header">
@@ -27,8 +27,6 @@ var Login = React.createClass({
     		<input ref="user" type="text" placeholder="Enter username..."/><br/>
     		<label>Password</label><br/>
     		<input ref="password" type="password" placeholder="Enter password"/><br/>
-        <label>Password Confirmation</label><br/>
-        <input ref="password2" type="password" placeholder="Enter password"/><br/>
     		<button>Submit</button>
         </div>
     	</form>
@@ -42,15 +40,19 @@ var Login = React.createClass({
   	// console.log('pass '+this.refs.password.getDOMNode.value)
   	
     var login = new LoginModel({
-  		username: this.refs.user.getDOMNode().value,
-  		password: this.refs.password.getDOMNode().value,
-      password2: this.refs.password2.getDOMNode().value
+  		name: this.refs.user.getDOMNode().value,
+  		password: this.refs.password.getDOMNode().value
+
   	});
 
     if(login.isValid()){
       console.log(login.validationError);
-      $.post('/users/new', { username: login.get('username'), password: login.get('password'), password: login.get('password')  });
-      app.navigate('#moods/categories', {trigger: true});
+      $.post('/login', 
+        {
+          name: login.get('name'), 
+          password: login.get('password')
+      });
+      // app.navigate('#moods/categories', {trigger: true});
     }
     else{
        console.log(login.validationError);

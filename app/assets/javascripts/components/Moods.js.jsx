@@ -5,8 +5,8 @@ var Moods = React.createClass({
           };
   },
   componentWillUnmount: function() {
-      window.removeEventListener("popstate", this.fadeIn);
-      window.removeEventListener('hashchange', this.fadeIn);
+      // window.removeEventListener("popstate", this.fadeIn);
+      // window.removeEventListener('hashchange', this.fadeIn);
      // window.removeEventListener('load', this.fadeIn);
   },
   componentDidMount: function() {
@@ -17,8 +17,8 @@ var Moods = React.createClass({
 						  });
 					}
   			}.bind(this));
-    window.addEventListener('hashchange', this.fadeIn);
-     window.addEventListener("onpushstate", this.fadeIn);
+    // window.addEventListener('hashchange', this.fadeIn);
+    //  window.addEventListener("onpushstate", this.fadeIn);
   },
 	render: function(){
       var divStyle = {
@@ -38,7 +38,7 @@ var Moods = React.createClass({
   	 	return(
             <div  >
                 <h1>How are you feeling?</h1>
-      	 				<div style={divStyle} ref="moods"  >
+      	 				<div  ref="moods"  >
       	 					{moodlist}
       	 				</div>
             </div>

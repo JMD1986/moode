@@ -39,6 +39,11 @@ var Signup = React.createClass({
               password: signup.get('password'),
               password_confirmation: signup.get('password')
             });
+          // $.post('/login', 
+          //   {
+          //     email: signup.get('email'), 
+          //     password: signup.get('password')
+          //   });
       }
       else{
          console.log(signup.validationError);

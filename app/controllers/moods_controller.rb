@@ -1,24 +1,16 @@
 class MoodsController < ApplicationController
   before_action :set_mood, only: [:show, :edit, :update, :destroy]
 
-  # GET /moods
-  # GET /moods.json
   def index
     @moods = Mood.all
 
     render json: @moods
   end
-
-  # GET /moods/1
-  # GET /moods/1.json
   def show
-    render json: @moods = Mood.find(params[:id])
+    @playlists = Playlist.where(mood_id: params[:id]).limit(9)
+    render json: @playlists
   end
 
-
-
-  # POST /moods
-  # POST /moods.json
   def create
     @mood = Mood.new(mood_params)
 

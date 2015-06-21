@@ -7,7 +7,9 @@ var Playlist = React.createClass({
 		}
 	},
 	componentDidMount: function(){
-		$.get('/playlists', function(models){
+		var url = window.location.href;
+  		var query = url.split('/').pop();
+		$.get('/moods/'+query, function(models){
 				if(this.isMounted()){
 					this.setState({
 						playlistCollection: models
@@ -28,7 +30,7 @@ var Playlist = React.createClass({
 	  					console.log('match');
 	  					return(
 			  				<div className="mona-box" key={model.id}>
-			  				<a href={"#userplaylist/"+ model.title }><img src="model.url" width="100" height="100"/></a>
+			  				<a href={"#userplaylist/"+ model.title }><img src="" width="100" height="100"/></a>
 			  					<a href={"#userplaylist/"+ model.title } >
 			  						<div  >
 			  							<span>{model.title}</span>

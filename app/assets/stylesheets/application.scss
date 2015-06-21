@@ -41,12 +41,33 @@ body {
  	border: 1px solid black;
  	margin: 10px;
  	float: left;
+ 	border-radius: 5px;
  }
 
  .mona-box:nth-child(3n+4){
  	 clear: both;
  }
 
+.mood-img img{
+	 width: 100%;
+	 height:  200px;
+	// max-width: 200px;
+	background-size: cover;
+	background-position: 50% 50%;
+	-webkit-filter: grayscale(100%); 
+	filter: grayscale(100%);
+
+}
+
+.mood-img{
+	max-width: 200px;
+
+}
+
+.mood-img img:hover{
+	-webkit-filter: grayscale(0); 
+	filter: grayscale(0);
+}
 
 
 

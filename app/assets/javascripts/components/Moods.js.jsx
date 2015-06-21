@@ -28,6 +28,7 @@ var Moods = React.createClass({
         return(
           <a key={model.id} href={'#playlist/'+ model.id} className="mona-box">
               <div >
+              <div className="mood-img"><img src={model.url}/></div>
                   <div >
                       {model.mood}
                   </div>
@@ -38,7 +39,7 @@ var Moods = React.createClass({
   	 	return(
             <div  >
                 <h1>How are you feeling?</h1>
-      	 				<div  ref="moods"  >
+      	 				<div ref="moods"  >
       	 					{moodlist}
       	 				</div>
             </div>

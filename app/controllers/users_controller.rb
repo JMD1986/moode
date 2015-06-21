@@ -8,6 +8,8 @@ class UsersController < ApplicationController
   end
 
   def show
+    User.find(params[:id])
+    Like.find(user_id: params[:id]).count
     render json: User.find(params[:id])
   end
 
@@ -17,11 +19,9 @@ class UsersController < ApplicationController
 
     respond_to do |format|
       if @user.save
-        format.html { redirect_to @user, notice: 'User was successfully created.' }
-        format.json { render :show, status: :created, location: @user }
+        render json: { message: "user created"}
       else
-        format.html { render :new }
-        format.json { render json: @user.errors, status: :unprocessable_entity }
+        render json: { message: "user could not be created"}
       end
     end
   end

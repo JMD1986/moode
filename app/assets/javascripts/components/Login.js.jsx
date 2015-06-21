@@ -47,18 +47,18 @@ var Login = React.createClass({
 
     if(login.isValid()){
       console.log(login.validationError);
-      $.post('/login', 
+      $.post('/login',
         {
-          name: login.get('name'), 
+          name: login.get('name'),
           password: login.get('password')
       });
       // app.navigate('#moods/categories', {trigger: true});
     }
     else{
-      $.get('/logn', function(error){
+      $.get('/login', function(error){
          console.log(error);
          });
-      
+
        console.log(login.validationError);
     }
 

@@ -7,7 +7,7 @@ class PlaylistsController < ApplicationController
   end
 
   def show
-    render json: @playlist = Playlist.where(params[:id])
+    render json: @playlist = Playlist.find(params[:id])
   end
 
   # GET /playlists/new
@@ -15,9 +15,6 @@ class PlaylistsController < ApplicationController
     @playlist = Playlist.new
   end
 
-
-  # POST /playlists
-  # POST /playlists.json
   def create
     @playlist = Playlist.new(playlist_params)
 
@@ -30,31 +27,7 @@ class PlaylistsController < ApplicationController
         format.json { render json: @playlist.errors, status: :unprocessable_entity }
       end
     end
-  end
 
-  # PATCH/PUT /playlists/1
-  # PATCH/PUT /playlists/1.json
-  def update
-    respond_to do |format|
-      if @playlist.update(playlist_params)
-        format.html { redirect_to @playlist, notice: 'Playlist was successfully updated.' }
-        format.json { render :show, status: :ok, location: @playlist }
-      else
-        format.html { render :edit }
-        format.json { render json: @playlist.errors, status: :unprocessable_entity }
-      end
-    end
-  end
-
-  # DELETE /playlists/1
-  # DELETE /playlists/1.json
-  def destroy
-    @playlist.destroy
-    respond_to do |format|
-      format.html { redirect_to playlists_url, notice: 'Playlist was successfully destroyed.' }
-      format.json { head :no_content }
-    end
-  end
 
   private
     # Use callbacks to share common setup or constraints between actions.
@@ -66,4 +39,5 @@ class PlaylistsController < ApplicationController
     def playlist_params
       params.require(:playlist).permit(:user, :title, :mood_id)
     end
+  end
 end

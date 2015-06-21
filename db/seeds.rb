@@ -30,11 +30,10 @@ playlists = Playlist.create(
 users = User.create([{ name: "John", email: "Johndaugherty1986@gmail.com",  imageurl: "http://i.imgur.com/tciLfzQ.jpg"},
   {name: "Romona", email: "bellamy2727@yahoo.com",  imageurl: "http://i.imgur.com/5A95Faw.jpg"},
   {name: "Tito", email: "Tito@ilikebigbutts.org", imageurl: "http://i.imgur.com/4PgOxLr.jpg"},
-  {name: "Nikola Tesla", email: "Ilovescience@electricisdope.com", imageurl:"http://www.teslasociety.com/pictures/pic1.jpg"}])
+  {name: "Nikola Tesla", email: "Ilovescience@electricityisdope.com", imageurl:"http://www.teslasociety.com/pictures/pic1.jpg"}])
 
-20.times do
-@moods = ["Confused","Happy","Angry",
-  "relaxed", "Turnt", "Anxious", "Sensual", "Humorous", "Tired"]
+81.times do
+
 playlists = Playlist.create([{user: Faker::Name.name, mood_id: rand(1..9),
                     url: "https://soundcloud.com/jordan-myers-22/sets/js-playlist",
                     title: Faker::Lorem.sentence(1)}])

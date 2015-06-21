@@ -19,8 +19,13 @@ var Playlist = React.createClass({
   			query = url.split('/').pop();
   			console.log(query);
   			playlistCategories = this.state.playlistCollection.map(function(model){
+  					
+  					
+  			
   			return(
-  				<div className="mona-box" key={model.id} >
+
+
+  				<div className="mona-box" key={model.id}>
   				<a href={"#userplaylist/"+ model.title }><img src="http://1.bp.blogspot.com/-n4re1AOb5x0/U-WP0ppwr5I/AAAAAAAALhY/QgFS0Bmp6Ug/s1600/cute-wink-smiley.png" width="100" height="100"/></a>
   					<a href={"#userplaylist/"+ model.title } >
   						<div  >
@@ -32,6 +37,8 @@ var Playlist = React.createClass({
   					</a>
   				</div>
   			);
+
+
   		})
 
     return (

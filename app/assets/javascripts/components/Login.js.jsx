@@ -16,6 +16,8 @@ var Login = React.createClass({
     		<input ref="user" type="text" placeholder="Enter username..."/><br/>
     		<label>Password</label><br/>
     		<input ref="password" type="password" placeholder="Enter password"/><br/>
+        <label>Password Confirmation</label><br/>
+        <input ref="password2" type="password" placeholder="Enter password"/><br/>
     		<button>Submit</button>
         </div>
     	</form>
@@ -25,23 +27,22 @@ var Login = React.createClass({
   formSubmitted: function (e){
   	e.preventDefault();
     var app = new App();
-  	console.log('user '+this.refs.user.getDOMNode().value);
-  	console.log('pass '+this.refs.password.getDOMNode.value)
-  	var login = new LoginModel({
-  		user: this.refs.user.getDOMNode().value,
-  		password: this.refs.password.getDOMNode.value
+  	// console.log('user '+this.refs.user.getDOMNode().value);
+  	// console.log('pass '+this.refs.password.getDOMNode.value)
+  	
+    var login = new LoginModel({
+  		username: this.refs.user.getDOMNode().value,
+  		password: this.refs.password.getDOMNode().value,
+      password2: this.refs.password2.getDOMNode().value
   	});
 
-    // if(login.get('username') !=== null && login.get('password') !== null ){
-    //   console.log('true')
+    if(login.isValid()){
+      console.log(login.validationError);
+      $.post('/users/new', { username: login.get('username'), password: login.get('password'), password: login.get('password')  });
     }
-    // app.navigate('#moods/1', {trigger:true});
-  	// if(login.isValid()){
-  	// 	console.log(login.validationError);
-   //      // 
-  	// }
-  	// else{
-  	// 	console.log(login.validationError);
+    else{
+       console.log(login.validationError);
+    }
     
-  	// }
+  	 }
 });

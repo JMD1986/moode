@@ -7,7 +7,7 @@ var Moods = React.createClass({
           };
         },
     componentDidMount: function() {
-      $.get( "http://localhost:3000/moods", function(models ) {
+      $.get( "/moods", function(models ) {
 					if(this.isMounted()) {
 							this.setState({
                    moodHolder: models

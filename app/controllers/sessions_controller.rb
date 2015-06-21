@@ -3,15 +3,13 @@ class SessionsController < ApplicationController
   end
 
   def create
-    user = User.find_by_name(name: params[:name])
-    if user && user.authenticate(password: params[:password])
-    # user = User.find_by_email(email: params[:email])
-    # if user && user.authenticate(password: params[:password])
+    user = User.find_by_name(params[:name])
+
+    if user && user.authenticate(params[:password])
       session[:user_id] = user.id
-      render json: 'You logged in successfully! Hooray!'
+      render json: { message: "logged in!" }
     else
-      flash[:alert] = "Username or email did not match."
-      render json: "Username or email did not match."
+      render json: { message: "user does not exist" }, status: 404
     end
   end
 

@@ -1,11 +1,11 @@
 var Login = React.createClass({
   componentDidMount: function() {
-    window.addEventListener('load', this.fadeIn);
-    window.addEventListener("hashchange", this.fadeIn);
+    // window.addEventListener('load', this.fadeIn);
+    // window.addEventListener("hashchange", this.fadeIn);
   },
   componentWillUnmount: function() {
-    window.removeEventListener('load', this.fadeIn);
-     window.removeEventListener("hashchange", this.fadeIn);
+    // window.removeEventListener('load', this.fadeIn);
+    //  window.removeEventListener("hashchange", this.fadeIn);
   },
   render: function () {
     var divStyle ={
@@ -13,7 +13,7 @@ var Login = React.createClass({
     }
     return (
       <div >
-    	<form onSubmit={this.formSubmitted} ref="test" style={divStyle}>
+    	<form onSubmit={this.formSubmitted} ref="test" >
 
         <div className="container">
         <div className="main-header">
@@ -40,7 +40,7 @@ var Login = React.createClass({
     var app = new App();
   	// console.log('user '+this.refs.user.getDOMNode().value);
   	// console.log('pass '+this.refs.password.getDOMNode.value)
-  	
+
     var login = new LoginModel({
   		username: this.refs.user.getDOMNode().value,
   		password: this.refs.password.getDOMNode().value,
@@ -55,7 +55,7 @@ var Login = React.createClass({
     else{
        console.log(login.validationError);
     }
-    
+
   },
   fadeIn: function(e){
     e.preventDefault();

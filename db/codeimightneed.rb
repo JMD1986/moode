@@ -5,8 +5,10 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+1.times do
 
-moods = Mood.create([{mood: "Happy", url: "http://straightfromthea.com/wp-content/uploads/2009/03/image_8515360.jpg"},
+moods = Mood.create([
+  {mood: "Happy", url: "http://straightfromthea.com/wp-content/uploads/2009/03/image_8515360.jpg"},
   {mood: "Confused", url: "http://replygif.net/thumbnail/1322.gif"},
   {mood: "Angry", url: "http://myspiltmilk.com/sites/default/files/main-image/lewisblack_0.jpg"},
   {mood: "Relaxed", url: "http://www.greatamericanthings.net/wp-content/uploads/2012/03/Buffett-by-sweetslyricsdotcom.jpg"},
@@ -15,8 +17,9 @@ moods = Mood.create([{mood: "Happy", url: "http://straightfromthea.com/wp-conten
   {mood: "Sensual", url: "http://thatgrapejuice.net/wp-content/uploads/HLIC/6229c55fb7ed72fef88d35caacf46d2c.jpg"},
   {mood: "Humorous", url: "http://www.comedymoontower.com/wp-content/uploads/2012/02/Audience-Laughing.jpg"},
   {mood: "Tired", url: "http://www.godhungry.org/wp-content/uploads/2015/05/tired-lady.jpg"}])
-#password?!!
+end
 
+1.times do
 playlists = Playlist.create(
   [{ user: "John", title: "Burning down the house", url: "https://soundcloud.com/maddecent/sets/jeffrees-vol-6", mood_id: 5},
   { user: "John", title: "the house that funk built" , url: "https://soundcloud.com/joshua-kong/sets/chillstep", mood_id: 1},
@@ -26,24 +29,19 @@ playlists = Playlist.create(
   { user: "Tito" , title: "June good times playlist", url: "https://soundcloud.com/ngryullet/sets/reggae", mood_id: 4},
   { user: "Tito", title: "I need a laugh", url: "https://soundcloud.com/mazemerizer/sets/standup", mood_id: 8},
   { user: "Ramona", title: "Night time tunes", url: "https://soundcloud.com/reecerance/sets/ambient-music", mood_id: 9}])
+end
 
-users = User.create([{ name: "John", email: "Johndaugherty1986@gmail.com", imageurl: "http://i.imgur.com/tciLfzQ.jpg"},
+1.times do
+users = User.create([{ name: "John", email: "Johndaugherty1986@gmail.com",  imageurl: "http://i.imgur.com/tciLfzQ.jpg"},
   {name: "Romona", email: "bellamy2727@yahoo.com",  imageurl: "http://i.imgur.com/5A95Faw.jpg"},
   {name: "Tito", email: "Tito@ilikebigbutts.org", imageurl: "http://i.imgur.com/4PgOxLr.jpg"},
   {name: "Nikola Tesla", email: "Ilovescience@electricityisdope.com", imageurl:"http://www.teslasociety.com/pictures/pic1.jpg"}])
-
-100.times do
+emd
+81.times do
 
 playlists = Playlist.create([{user: Faker::Name.name, mood_id: rand(1..9),
                     url: "https://soundcloud.com/jordan-myers-22/sets/js-playlist",
-                    title: Faker::Lorem.sentence(1)
-          }])
-
-users = User.create([{
-  name: Faker::Name.name,
-  email: Faker::Internet.email,
-  password_digest: "hello",
-  bio: Faker::Lorem.paragraph(9),
-  imageurl: "http://i.imgur.com/J9fQX9e.jpg"}])
+                    title: Faker::Lorem.sentence(1)}])
+users = User.create([{ name: Faker::Name.name, email: Faker::Internet.email, password_digest: "hello"}, {name: "Romona", email: "Ramona@rramona.com", password_digest: "hello"}, {name: "Tito", email: "Tito@ilikebigbutts.org", password_digest: "hello"}, {name: "Summer", email: "summer@google.com", password_digest: "hello"}, {name: "David", email: "David@hotmail.org", password_digest: "hello"}])
 
 end

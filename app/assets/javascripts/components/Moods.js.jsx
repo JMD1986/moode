@@ -1,24 +1,29 @@
-
 var Moods = React.createClass({
-
 	getInitialState: function() {
           return {
             moodHolder: []  
           };
-        },
-    componentDidMount: function() {
-      $.get( "http://localhost:3000/moods", function(models ) {
+  },
+  componentWillUnmount: function() {
+      // window.removeEventListener("popstate", this.fadeIn);
+      // window.removeEventListener('hashchange', this.fadeIn);
+     // window.removeEventListener('load', this.fadeIn);
+  },
+  componentDidMount: function() {
+      $.get( "/moods", function(models ) {
 					if(this.isMounted()) {
 							this.setState({
                    moodHolder: models
 						  });
 					}
   			}.bind(this));
-
-    },
-
+    // window.addEventListener('hashchange', this.fadeIn);
+    //  window.addEventListener("onpushstate", this.fadeIn);
+  },
 	render: function(){
-
+      var divStyle = {
+          display: 'none'
+      }
   		moodlist =  this.state.moodHolder.map(function(model){
         return(
           <a key={model.id} href={'#playlist/'+ model.id} className="mona-box">
@@ -31,9 +36,9 @@ var Moods = React.createClass({
         );
   		})
   	 	return(
-            <div>
+            <div  >
                 <h1>How are you feeling?</h1>
-      	 				<div >
+      	 				<div  ref="moods"  >
       	 					{moodlist}
       	 				</div>
             </div>
@@ -44,6 +49,9 @@ var Moods = React.createClass({
     var query = e.target.innerText
     // app.navigate('#moods/' +query, {trigger: true});
   },
+  fadeIn: function(e){
+     $(this.refs.moods.getDOMNode()).fadeIn('15000');
+   }
 
 })
 

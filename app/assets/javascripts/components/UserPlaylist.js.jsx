@@ -5,7 +5,7 @@ var UserPlaylist = React.createClass({
 		}
 	},
 	componentDidMount: function(){
-		$.get('http://localhost:3000/playlists', function(models){
+		$.get('/playlists', function(models){
 				if(this.isMounted()){
 					this.setState({
 						playlistCollection: models

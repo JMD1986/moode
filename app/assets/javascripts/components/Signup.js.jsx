@@ -42,7 +42,7 @@ var Signup = React.createClass({
           // $.post('/login', 
           //   {
           //     email: signup.get('email'), 
-          //     password: signup.get('password')
+          //     username: signup.get('password')
           //   });
       }
       else{

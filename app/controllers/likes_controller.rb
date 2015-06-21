@@ -1,6 +1,8 @@
 class LikesController < ApplicationController
   before_action :set_like, only: [:show, :edit, :update, :destroy]
   skip_before_action :verify_authenticity_token
+
+
   def create
 
     authenticate_user!
@@ -16,6 +18,12 @@ class LikesController < ApplicationController
       end
     end
   end
+
+  # def show
+
+  #   like = Playlist.all
+  #   like.each do |l| l.
+  # end
 
 
   private

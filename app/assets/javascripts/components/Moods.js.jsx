@@ -1,7 +1,7 @@
 var Moods = React.createClass({
 	getInitialState: function() {
           return {
-            moodHolder: []  
+            moodHolder: []
           };
   },
   componentWillUnmount: function() {

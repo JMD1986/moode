@@ -13,14 +13,9 @@ var Profile = React.createClass({
 				}
 		}.bind(this));
 	},
-    render: function () {
-
-
-    	
+    render: function () {  	
     	console.log('true');
-		
-
-
+	
     		var url = window.location.href;
   			var query = url.split('/').pop();
   		
@@ -33,7 +28,7 @@ var Profile = React.createClass({
 						return(
 								<div><img src={model.imageurl}/></div>
 							)
-					}					
+					}				
 	  		})   	
         return (
           <div>

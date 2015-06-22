@@ -46,6 +46,8 @@ body {
  	border-radius: 5px;
  }
 
+
+
  .mona-box:nth-child(3n+4){
  	 clear: both;
  }
@@ -89,8 +91,11 @@ body {
 	padding-left: 20px;
 	padding-right: 20px;
 	box-sizing: border-box;
+	display: block;
+	height: 100px;
 
 }
+
 
 .soundcloud-playlist{
 	width: 100%;
@@ -99,6 +104,9 @@ body {
 	border: 1px solid #BA390E;
 	border-radius: 3px;
 }
+
+
+
 
 
 

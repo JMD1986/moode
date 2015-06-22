@@ -18,9 +18,9 @@ moods = Mood.create([{mood: "Happy", url: "http://streetdose.com/wp-content/uplo
 #password?!!
 
 playlists = Playlist.create(
-  [{ user: "John", title: "Burning down the house", url: "https://soundcloud.com/maddecent/sets/jeffrees-vol-6", mood_id: 5},
-  { user: "John", title: "the house that funk built" , url: "https://soundcloud.com/joshua-kong/sets/chillstep", mood_id: 1},
-  { user: "John", title: "Ayy Lmao", url: "https://soundcloud.com/sarbs/sets/comedy-bang-bang", mood_id: 8},
+  [{ user: "John", user_id: 1, title: "Burning down the house", url: "https://soundcloud.com/maddecent/sets/jeffrees-vol-6", mood_id: 5},
+  { user: "John", user_id: 1, title: "the house that funk built" , url: "https://soundcloud.com/joshua-kong/sets/chillstep", mood_id: 1},
+  { user: "John", user_id: 1 ,title: "Ayy Lmao", url: "https://soundcloud.com/sarbs/sets/comedy-bang-bang", mood_id: 8},
   { user: "Ramona", title: "Coding mix", url: "https://soundcloud.com/victoria-feere/sets/coding-mix", mood_id: 4},
   { user: "Ramona" , title: "May 2015 Austin Spring relaxation", url: "https://soundcloud.com/celestial_vibes/sets/summer-vibes-v2", mood_id: 1},
   { user: "Tito" , title: "June good times playlist", url: "https://soundcloud.com/ngryullet/sets/reggae", mood_id: 4},

@@ -9,10 +9,12 @@ class UsersController < ApplicationController
 
   def show
     User.find(params[:id])
-    Like.find(user_id: params[:id]).count
     render json: User.find(params[:id])
   end
 
+  def playlists
+    render json: User.find(params[:id]).playlists
+  end
 
   def create
     @user = User.new(name: params[:name],

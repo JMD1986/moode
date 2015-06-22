@@ -3,14 +3,14 @@ var Signup = React.createClass({
   render: function () {
     return (
       <div>
-      <div className="login-header">
+      <div className="login-header .col12">
       <h1>Sign up!</h1>
       </div>
       <form  className="sign-up-container" onSubmit={this.formSubmitted}>
 
         
 
-        <fieldset className="account-info">
+        <fieldset className="account-info .col12">
           <label className="firstname">Name</label><br/>
           <input ref="name" type="text" placeholder="Enter first name.."/>
           <label className="firstname">Email</label><br/>
@@ -19,7 +19,7 @@ var Signup = React.createClass({
 
           
 
-        <fieldset className="account-info">
+        <fieldset className="account-info .col12">
           <input  ref="email" type="text" placeholder="Enter email.."/><br/>
           <label className="firstname">Username</label><br/>
           <input ref="user" type="text" placeholder="Enter username.."/><br/>

@@ -12,7 +12,7 @@ var Login = React.createClass({
     return (
 
       <div className="Big-Div">
-         <div className="login-header">
+         <div className="login-header .col12">
             <h1>Moode</h1>
             <h2>How are you feeling today?</h2>
           </div>

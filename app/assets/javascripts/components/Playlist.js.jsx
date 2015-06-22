@@ -54,7 +54,7 @@ var Playlist = React.createClass({
 
     return (
       <div>
-      	<div className="login-header">
+      	<div className="login-header .col12">
       		<h1>Playlist Channel</h1>
       	</div>
       	{playlistCategories}

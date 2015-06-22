@@ -19,7 +19,7 @@ var Login = React.createClass({
           <form onSubmit={this.formSubmitted} ref="test">                   
 
               <div className="main-header">    
-                <h2>Login</h2>
+              
               </div>        
                    
              

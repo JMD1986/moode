@@ -22,7 +22,17 @@
 
 // Global-moblie //
 
+a, a:hover {
+	text-decoration: none;
+	color: #7e8f7c;
+	text-align: center;
+	font-size: 1.2em;
 
+
+}
+a {
+	margin-top: 10px;
+}
 body {
 
 	background: #fdf3e7;
@@ -438,7 +448,9 @@ body {
  	float: left;
  	border-radius: 5px;
  }
-
+.mona-box2{
+	border: 0;
+}
  .mona-box:nth-child(3n+4){
  	 clear: both;
  }
@@ -534,7 +546,9 @@ body {
 }
 
 .picture-container{
-	 border: 1px solid #eeeeee;
+	 	
+	 margin-left: 35%;
+	 margin-top: 120px;
 }
 .picture-container img {
 
@@ -552,12 +566,16 @@ body {
 	max-width: 100%;
 
 
+
 }
 
 .bottom-left-container {
+
 	max-width: 50%;
 	margin-top: 80px;
-	margin-left: 5%;
+	margin-left: 30%;
+	float: left;
+
 }
 
 

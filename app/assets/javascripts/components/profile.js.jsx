@@ -38,8 +38,8 @@ var Profile = React.createClass({
           <div>
           <div className="profile-container">
 
-  			<div className="top">
-    			<h1>User Profile</h1>
+  			<div className="login-header .col12">
+    			<h1>Mood Profile</h1>
   			</div>
 
   			<div className="picture-container">
@@ -60,15 +60,6 @@ var Profile = React.createClass({
 		  		</div>
 	  		<aside>
 	  		<div className="bottom-right-container">
-	  			<h5>Favorite Moode playlists</h5>
-	  			<br/>
-	  			<ul>
-	  				<li>Turnt Up</li>
-	  				<li>Summer of funk</li>
-	  				<li>jock jams</li>
-	  				<li>Hip stuff</li>
-	  				<li>Party Hardy</li>
-	  			</ul>
 
 	  		</div>
 	  		</aside>

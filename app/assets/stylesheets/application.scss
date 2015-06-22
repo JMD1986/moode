@@ -21,6 +21,8 @@
 
 
 // Global-moblie //
+@media screen and (max-width:400px){
+
 body {
 
 	background: #fdf3e7;
@@ -166,6 +168,10 @@ a.music-man, .music-title{
    max-width: 100%;
    height: 150px;
    background: #c63d0f;
+   font-family: "sail",helvetica, sans-serif;
+   font-style: normal;
+   font-weight: 400;
+   color: #fdf3e7;
 }
 
 .top h1{
@@ -246,31 +252,39 @@ a.music-man, .music-title{
 	height: 150px;
 	background:  #c63d0f;
 
+
 }
 .login-header h1 {
 	text-align: center;
-	font-size: 4em;
+	font-size: 7.5em;
+	color: #fdf3e7;
+	font-family: "sail",helvetica, sans-serif;
+	font-style: normal;
+	font-weight: 400;
+
+}
+.login-header h2 {
+	text-align: center;
+	font-size: 1.5em;
+	color: #fdf3e7;
+	font-family: "sail",helvetica, sans-serif;
+	font-style: normal;
+	font-weight: 300;
 }
 
 .container-main {
 	max-width: 100%;
-	background: #3b3738;
+	background: #fdf3e7;
 }
 
-.main-header {
 
-   max-width: 100%;
-   height: 150px;
-   background: #c63d0f;
-
-}
 
 
 
 .sign-up-container {
 	max-width:100%;
 	height: 231px;
-	background: #c63d0f;
+	background: #794400;
 }
 
 
@@ -279,18 +293,20 @@ a.music-man, .music-title{
 
 form {
 
-  margin-left: 30%;
+  margin-left: 39%;
   border: 1px solid #3b3738;
   border-radius: 5px;
   font-family: "source-sans-pro",sans-serif;
   font-style: normal;
   font-weight: 400;
   overflow: hidden;
-  width: 45%;
-  margin-top: 300px;
-  color: #c63d0f;
+  width: 23%;
+  margin-top: 150px;
+  background: #794400;
+  height: 250px;
 
 
+  padding-bottom: 55px;
 
 
 }
@@ -308,9 +324,10 @@ input {
 }
 
 .account-info label {
-  color: #395870;
+  color: #fdf3e7;
   display:block;
   font-weight: bold;
+  margin-top: 10px;
   
 }
 .account-info input {
@@ -335,18 +352,413 @@ input {
   
 }
 .account-action label {
-  color: #7c7c80;
+  color: #7e8f7c;
   font-size: 12px;
   float: left;
   margin: 10px 0 0 20px;
 }
 
+.account-info h1 {
+	text-align: center;
+	font-size: 1.5em; 
+	font-family: "source-sans-pro", Helvetica, Arial, sans-serif;
+	padding-bottom: 1em;
+	color: #7e8f7c;
+	margin-top: 20px;
+
+}
+.account-info button {
+	  margin-top: 20px;
+	  margin-left: 35%;
+	  -webkit-border-radius: 28;
+	  -moz-border-radius: 28;
+	  border-radius: 28px;
+	  -webkit-box-shadow: 0px 1px 3px #666666;
+	  -moz-box-shadow: 0px 1px 3px #666666;
+	  box-shadow: 0px 1px 3px #666666;
+	  color: #7e8f7c;
+	  font-size: 1em;
+	  background: #fdf3e7;
+	  padding: 10px 20px 10px 20px;
+	  text-decoration: none;
+
+
+
+	
+
+}
+.account-info  input {
+
+	max-width: 75%;
+	margin-right: 10%;
+	margin-left: 10%;
+
+
+}
+.username {
+
+	margin-left: 10%;
+	padding-top: 5px;
+
+
+}
+.firstname {
+	margin-left: 10%;
+	padding-top: 5px;
+}
+}
 // *****************//
 
 
+@media screen and (min-width:400px){
 
 
 
+body {
+
+	background: #fdf3e7;
+    font-family: "source-sans-pro",sans-serif;
+	font-style: italic;
+	font-weight: 400;
+}
+ 
+
+.main-header h2 {
+
+	font-family: helvetica, sans-serif;
+}
+
+ .mona-box, .mona-box2{
+ 	width: 100%;
+
+ 	max-width: 200px;
+ 	height: 200px;
+ 	border: 1px solid black;
+ 	margin: 20px;
+ 	float: left;
+ 	border-radius: 5px;
+ }
+
+ .mona-box:nth-child(3n+4){
+ 	 clear: both;
+ }
+ .mona-box2:nth-child(3n+5){
+ 	 clear: both;
+ }
+.mood-img img{
+	 width: 100%;
+	 height:  200px;
+	// max-width: 200px;
+	background-size: cover;
+	background-position: 50% 50%;
+	-webkit-filter: grayscale(100%); 
+	filter: grayscale(100%);
+
+}
+
+.grid-holder{
+	width: 100%;
+	margin: 50px auto auto auto;
+}
+
+.img-grid-wrapper{
+	width: 60%;
+	margin: 0 auto;
+}
+
+.mood-img{
+	max-width: 200px;
+
+}
+
+.mood-img img:hover{
+	-webkit-filter: grayscale(0); 
+	filter: grayscale(0);
+}
+
+.playlist-holder{
+	width: 100%;
+	margin: 0 auto;
+	padding-left: 20px;
+	padding-right: 20px;
+	box-sizing: border-box;
+
+}
+
+.soundcloud-playlist{
+	width: 100%;
+	max-width: 900px;
+	margin: 50px auto 50px auto;
+	border: 1px solid #BA390E;
+	border-radius: 3px;
+}
+
+
+
+
+
+
+
+// **** USER PROFILE PAGE**** //
+
+
+
+
+
+
+.profile-container {
+
+   background: #fdf3e7;
+   max-width: 1300px;
+   height: 1300px;
+   
+  
+   
+}
+
+.top {
+
+   max-width: 100%;
+   height: 150px;
+   background: #c63d0f;
+   font-family: "sail",helvetica, sans-serif;
+   font-style: normal;
+   font-weight: 400;
+   color: #fdf3e7;
+}
+
+.top h1{
+	text-align: center;
+	font-size: 5em;
+	font-family: "sails", helvetica, sans-serif;
+}
+
+.picture-container{
+	 border: 1px solid #eeeeee;
+}
+.picture-container img {
+
+  // border-radius: 100%;
+
+  // height: 250px;
+  // max-width: 500px;
+  // margin-top: 100px;
+  // margin-left: 45%;
+
+
+}
+
+.bottom-container {
+	max-width: 100%;
+
+
+}
+
+.bottom-left-container {
+	max-width: 50%;
+	margin-top: 80px;
+	margin-left: 5%;
+}
+
+
+.article {
+	float: left;
+	max-width: 650px;
+
+}
+
+.article h3{
+	margin-right: 12.7%;
+ 	color: #7e8f7c;
+ 	font-size: 4em;
+}
+
+
+// *******///
+
+// **Aside User Profile** //
+
+.bottom-right-container {
+	float: right;
+	margin-right: 10%;
+	line-height: 200%;
+	text-align: center;
+}
+
+
+
+
+
+
+
+// **footer User Profile **//
+
+
+
+
+
+
+// ** Login In/Sign up page ** //
+.login-header {
+	max-width:100%;
+	height: 150px;
+	background:  #c63d0f;
+
+
+}
+.login-header h1 {
+	text-align: center;
+	font-size: 7.5em;
+	color: #fdf3e7;
+	font-family: "sail",helvetica, sans-serif;
+	font-style: normal;
+	font-weight: 400;
+
+}
+.login-header h2 {
+	text-align: center;
+	font-size: 1.5em;
+	color: #fdf3e7;
+	font-family: "sail",helvetica, sans-serif;
+	font-style: normal;
+	font-weight: 300;
+}
+
+.container-main {
+	max-width: 100%;
+	background: #fdf3e7;
+}
+
+
+
+
+
+.sign-up-container {
+	max-width:100%;
+	height: 231px;
+	background: #794400;
+}
+
+
+
+
+
+form {
+
+  margin-left: 39%;
+  border: 1px solid #3b3738;
+  border-radius: 5px;
+  font-family: "source-sans-pro",sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  overflow: hidden;
+  width: 23%;
+  margin-top: 150px;
+  background: #794400;
+  height: 250px;
+
+
+  padding-bottom: 55px;
+
+
+}
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+input {
+
+  border-radius: 5px;
+  font: 14px/1.4 "source-sans-pro", Helvetica, Arial, sans-serif;
+  margin: 0 auto;
+}
+
+.account-info label {
+  color: #fdf3e7;
+  display:block;
+  font-weight: bold;
+  margin-top: 10px;
+  
+}
+.account-info input {
+  background: #fff;
+  border: 1px solid #c6c7cc;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, .1);
+  color: #636466;
+  width: 100%;
+}
+.account-action {
+  background: #f0f0f2;
+  border-top: 1px solid #c6c7cc;
+  
+}
+.account-action .btn {
+  background: linear-gradient(#49708f, #293f50);
+  border: 0;
+  color: #fff;
+  cursor: pointer;
+  font-weight: bold;
+  float: left;
+  
+}
+.account-action label {
+  color: #7e8f7c;
+  font-size: 12px;
+  float: left;
+  margin: 10px 0 0 20px;
+}
+
+.account-info h1 {
+	text-align: center;
+	font-size: 1.5em; 
+	font-family: "source-sans-pro", Helvetica, Arial, sans-serif;
+	padding-bottom: 1em;
+	color: #7e8f7c;
+	margin-top: 20px;
+
+}
+.account-info button {
+	  margin-top: 20px;
+	  margin-left: 35%;
+	  -webkit-border-radius: 28;
+	  -moz-border-radius: 28;
+	  border-radius: 28px;
+	  -webkit-box-shadow: 0px 1px 3px #666666;
+	  -moz-box-shadow: 0px 1px 3px #666666;
+	  box-shadow: 0px 1px 3px #666666;
+	  color: #7e8f7c;
+	  font-size: 1em;
+	  background: #fdf3e7;
+	  padding: 10px 20px 10px 20px;
+	  text-decoration: none;
+
+
+
+	
+
+}
+.account-info  input {
+
+	max-width: 75%;
+	margin-right: 10%;
+	margin-left: 10%;
+
+
+}
+.username {
+
+	margin-left: 10%;
+	padding-top: 5px;
+
+
+}
+.firstname {
+	margin-left: 10%;
+	padding-top: 5px;
+}
+}
 
 
 

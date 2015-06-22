@@ -42,7 +42,7 @@ var Moods = React.createClass({
   		})
   	 	return(
             <div>
-              <div className="login-header">
+              <div className="login-header .col12">
                  <h1>How are you feeling?</h1>
                 </div>
       	 				<div ref="moods"  >

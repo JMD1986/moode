@@ -48,6 +48,14 @@ body {
  	border-radius: 5px;
  }
 
+.mona-box2{
+	border: none;
+}
+
+.music-man a:hover{
+	background-color:none;
+}
+
  .mona-box:nth-child(3n+4){
  	 clear: both;
  }
@@ -87,12 +95,36 @@ body {
 
 .playlist-holder{
 	width: 100%;
-	margin: 0 auto;
+	margin: 20ps auto auto auto;
 	padding-left: 20px;
 	padding-right: 20px;
 	box-sizing: border-box;
+	display: block;
+	min-height: 100px;
+
 
 }
+
+a.music-man, .music-title{
+	display: block;
+	height: 100px;
+	// border: 2px solid green;
+	margin: 20px auto auto auto;
+	width: 100px;
+
+}
+
+.music-title{
+	width:150px;
+	text-align: center
+}
+
+.music-title div{
+
+	margin-bottom: 10px;
+
+}
+
 
 .soundcloud-playlist{
 	width: 100%;
@@ -101,6 +133,12 @@ body {
 	border: 1px solid #BA390E;
 	border-radius: 3px;
 }
+
+.error{
+	width: 100px;
+	height: 20px;
+}
+
 
 
 
@@ -143,7 +181,8 @@ body {
 }
 
 .picture-container{
-	 border: 1px solid #eeeeee;
+	 // border: 1px solid #eeeeee;
+
 }
 .picture-container img {
 

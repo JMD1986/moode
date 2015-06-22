@@ -13,28 +13,27 @@ var Profile = React.createClass({
 				}
 		}.bind(this));
 	},
-    render: function () {
+    render: function () {  	
 
-
-    	
-    	console.log('true');
-		
-
-
+	
     		var url = window.location.href;
   			var query = url.split('/').pop();
+
+					console.log(query);
   		
   			userImages = this.state.userCollection.map(function(model){
   				var string = model.name +'';
-				console.log(string);	
-					console.log(query);
-				if(string === query)
+					
+				if(model.name === query)
 					{
+
+						console.log(model.imageurl);
 						return(
-								<div><img src={model.imageurl}/></div>
+								<div key={model.id}><img src={model.imageurl}/></div>
 							)
-					}					
-	  		})   	
+					}				
+	  		}) 
+	 	
         return (
           <div>
           <div className="profile-container .col12">

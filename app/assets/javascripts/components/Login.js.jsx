@@ -17,12 +17,22 @@ var Login = React.createClass({
             <h2>How are you feeling today?</h2>
           </div>
           <form onSubmit={this.formSubmitted} ref="test">                   
+
+              <div className="main-header">    
+                <h2>Login</h2>
+              </div>        
+              <fieldset className="account-info">
+                    
+                    <h1 >Login</h1>
+                    <label>Username</label><br/>
+
                  
                    
              
               <fieldset className="account-info">
                     <h1>Login</h1>
                     <label className="username">Username</label><br/>
+
                     <input ref="user" type="text" placeholder="Enter username..."/><br/>
                     <label className="username">Password</label><br/>
                     <input ref="password" type="password" placeholder="Enter password"/><br/>
@@ -53,14 +63,12 @@ var Login = React.createClass({
       //     password: login.get('password')
       // });
       app.navigate('#moods/categories', {trigger: true});
-
+        // this.refs.error1.getDOMNode().innerHTML = login.validationError;
     }
     else{
-      $.get('/login', function(error){
-         console.log(error);
-         });
-
-       console.log(login.validationError);
+          // this.refs.error1.getDOMNode().innerHTML = 'Please enter password';
+          alert('test')
+       // console.log(login.validationError);
     }
 
   },

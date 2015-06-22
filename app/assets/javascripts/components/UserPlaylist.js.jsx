@@ -28,7 +28,7 @@ var UserPlaylist = React.createClass({
 			
 		return(
 			<div>
-				<div className="login-header" >
+				<div className="login-header .col12">
 					<h1>User Playlist</h1>
 				</div>
 				

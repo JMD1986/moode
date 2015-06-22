@@ -24,8 +24,9 @@ var Playlist = React.createClass({
   			playlistCategories = this.state.playlistCollection.map(function(model){
   					
   						var string = model.mood_id +'';
+  						
 	  					
-	  				if(string === query)
+	  				if(string == query)
 	  				{
 	  					console.log('match');
 	  					return(
@@ -34,17 +35,19 @@ var Playlist = React.createClass({
 	  						<div className="img-grid-wrapper">
 			  				<div className="mona-box2">
 			  				<div className="playlist-users">
-			  				<a  href={"#userplaylist/"+ model.title }><img src={model.imageurl} width="100" height="100"/></a>
+			  				<a className="music-man" href={"#userplaylist/"+ model.title }><img src={model.imageurl} width="100" height="100"/></a>
+			  					<div className="music-title">
 			  					<a href={"#profile/" + model.user}>
 			  						<div>{model.user}</div>
 			  					</a>
-			  				</div>
+			  				
 			  					<a href={"#userplaylist/"+ model.title } >
 			  						<div  >
 			  							<span>{model.title}</span>
 			  						</div>
 			  					</a>
-			  				
+			  					</div>
+			  				</div>
 			  				</div>
 			  				</div>
 			  				</div>

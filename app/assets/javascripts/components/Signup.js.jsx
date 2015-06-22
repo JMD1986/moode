@@ -8,25 +8,25 @@ var Signup = React.createClass({
       </div>
       <form  className="sign-up-container" onSubmit={this.formSubmitted}>
 
-        <h1>Sign Up</h1>
+        
 
         <fieldset className="account-info">
-        <label className="firstname" >Name</label>
-        <input ref="name" type="text" placeholder="Enter first name.."/>
-        <label>Email</label>
+          <label className="firstname">Name</label><br/>
+          <input ref="name" type="text" placeholder="Enter first name.."/>
+          <label className="firstname">Email</label><br/>
         </fieldset>
 
 
           
 
         <fieldset className="account-info">
-        <input  ref="email" type="text" placeholder="Enter email.."/>
-        <label>Username</label>
-        <input ref="user" type="text" placeholder="Enter username.."/>
-        <label>Password</label>
+          <input  ref="email" type="text" placeholder="Enter email.."/><br/>
+          <label className="firstname">Username</label><br/>
+          <input ref="user" type="text" placeholder="Enter username.."/><br/>
+          <label>Password</label>
         </fieldset>
         
-
+      
         <input ref="pass"type="password" placeholder="Enter password.."/>
         <label>Confirm Password</label>
         <input ref="pass2"type="password" placeholder="Confirm password.."/>

@@ -14,17 +14,17 @@ var Login = React.createClass({
       <div className="Big-Div">
          <div className="login-header">
             <h1>Moode</h1>
+            <h2>How are you feeling today?</h2>
           </div>
           <form onSubmit={this.formSubmitted} ref="test">                   
-              <div className="main-header">    
-                <h2>Login</h2>
-              </div>        
+                 
+                   
              
               <fieldset className="account-info">
-                    <h1 >Login</h1>
-                    <label>Username</label><br/>
+                    <h1>Login</h1>
+                    <label className="username">Username</label><br/>
                     <input ref="user" type="text" placeholder="Enter username..."/><br/>
-                    <label>Password</label><br/>
+                    <label className="username">Password</label><br/>
                     <input ref="password" type="password" placeholder="Enter password"/><br/>
                        <button>Submit</button>                      
               </fieldset>

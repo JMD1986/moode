@@ -35,19 +35,70 @@ body {
 	font-family: helvetica, sans-serif;
 }
 
- .mona-box{
- 	width: 200px;
+ .mona-box, .mona-box2{
+ 	width: 100%;
+
+ 	max-width: 200px;
  	height: 200px;
  	border: 1px solid black;
- 	margin: 10px;
+ 	margin: 20px;
  	float: left;
+ 	border-radius: 5px;
  }
 
  .mona-box:nth-child(3n+4){
  	 clear: both;
  }
+ .mona-box2:nth-child(3n+5){
+ 	 clear: both;
+ }
+.mood-img img{
+	 width: 100%;
+	 height:  200px;
+	// max-width: 200px;
+	background-size: cover;
+	background-position: 50% 50%;
+	-webkit-filter: grayscale(100%); 
+	filter: grayscale(100%);
 
+}
 
+.grid-holder{
+	width: 100%;
+	margin: 50px auto auto auto;
+}
+
+.img-grid-wrapper{
+	width: 60%;
+	margin: 0 auto;
+}
+
+.mood-img{
+	max-width: 200px;
+
+}
+
+.mood-img img:hover{
+	-webkit-filter: grayscale(0); 
+	filter: grayscale(0);
+}
+
+.playlist-holder{
+	width: 100%;
+	margin: 0 auto;
+	padding-left: 20px;
+	padding-right: 20px;
+	box-sizing: border-box;
+
+}
+
+.soundcloud-playlist{
+	width: 100%;
+	max-width: 900px;
+	margin: 50px auto 50px auto;
+	border: 1px solid #BA390E;
+	border-radius: 3px;
+}
 
 
 

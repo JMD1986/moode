@@ -1,7 +1,7 @@
 var Moods = React.createClass({
 	getInitialState: function() {
           return {
-            moodHolder: []  
+            moodHolder: []
           };
   },
   componentWillUnmount: function() {
@@ -26,19 +26,26 @@ var Moods = React.createClass({
       }
   		moodlist =  this.state.moodHolder.map(function(model){
         return(
-          <a key={model.id} href={'#playlist/'+ model.id} className="mona-box">
+          <div key={model.id} className="grid-holder">
+          <div className="img-grid-wrapper">
+          <a  href={'#playlist/'+ model.id} className="mona-box">
               <div >
+              <div className="mood-img"><img src={model.url}/></div>
                   <div >
                       {model.mood}
                   </div>
               </div>
           </a>
+          </div>
+          </div>
         );
   		})
   	 	return(
-            <div  >
-                <h1>How are you feeling?</h1>
-      	 				<div  ref="moods"  >
+            <div>
+              <div className="login-header">
+                 <h1>How are you feeling?</h1>
+                </div>
+      	 				<div ref="moods"  >
       	 					{moodlist}
       	 				</div>
             </div>

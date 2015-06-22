@@ -62,6 +62,7 @@ var Signup = React.createClass({
               password: signup.get('password'),
               password_confirmation: signup.get('password')
             });
+           app.navigate('#moods/categories', {trigger: true});
       //     $.post('/login', 
       //       {
       //         name: signup.get('name'), 

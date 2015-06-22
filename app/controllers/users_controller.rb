@@ -8,22 +8,25 @@ class UsersController < ApplicationController
   end
 
   def show
+    User.find(params[:id])
+    Like.find(user_id: params[:id]).count
     render json: User.find(params[:id])
   end
 
 
   def create
-    @user = User.new(name: params[:name], email: params[:email],  password: params[:password], password_confirmation: params[:password_confirmation] )
+    @user = User.new(name: params[:name],
+                    email: params[:email],
+                 password: params[:password],
+    password_confirmation: params[:password_confirmation] )
 
-    respond_to do |format|
+    # respond_to do |format|
       if @user.save
-        format.html { redirect_to @user, notice: 'User was successfully created.' }
-        format.json { render :show, status: :created, location: @user }
+        render json: { message: "user created"}
       else
-        format.html { render :new }
-        format.json { render json: @user.errors, status: :unprocessable_entity }
+        render json: { message: "user could not be created"}
       end
-    end
+    # end
   end
 
   private

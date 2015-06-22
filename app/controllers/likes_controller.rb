@@ -1,21 +1,25 @@
 class LikesController < ApplicationController
   before_action :set_like, only: [:show, :edit, :update, :destroy]
   skip_before_action :verify_authenticity_token
+
+
   def create
 
     authenticate_user!
     @like = Like.new(like_params)
 
-    respond_to do |format|
       if @like.save
-        format.html { redirect_to @like, notice: 'Like was successfully created.' }
         format.json { render :show, status: :created, location: @like }
       else
-        format.html { render :new }
-        format.json { render json: @like.errors, status: :unprocessable_entity }
+         format.json { render json: @like.errors, status: :unprocessable_entity }
       end
-    end
+
   end
+
+  # def show
+  #   like = Playlist.all
+  #   like.each do |l| l.
+  # end
 
 
   private
@@ -25,5 +29,5 @@ class LikesController < ApplicationController
 
     def like_params
       params.require(:like).permit(:like, :user_id, :comment_id, :playlist_id)
-    endz`
+    end
 end

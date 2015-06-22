@@ -33,10 +33,12 @@ var Playlist = React.createClass({
 	  						<div  key={model.id} className="grid-holder">
 	  						<div className="img-grid-wrapper">
 			  				<div className="mona-box2">
-			  				<a className="playlist-users" href={"#userplaylist/"+ model.title }><img src="" width="100" height="100"/></a>
+			  				<div className="playlist-users">
+			  				<a  href={"#userplaylist/"+ model.title }><img src={model.imageurl} width="100" height="100"/></a>
 			  					<a href={"#profile/" + model.user}>
 			  						<div>{model.user}</div>
 			  					</a>
+			  				</div>
 			  					<a href={"#userplaylist/"+ model.title } >
 			  						<div  >
 			  							<span>{model.title}</span>

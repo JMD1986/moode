@@ -37,7 +37,7 @@ var Profile = React.createClass({
 	  		})   	
         return (
           <div>
-          <div className="profile-container">
+          <div className="profile-container .col12">
 
   			<div className="login-header .col12">
     			<h1>Mood Profile</h1>

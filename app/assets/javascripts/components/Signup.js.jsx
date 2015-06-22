@@ -6,7 +6,7 @@ var Signup = React.createClass({
       <div className="login-header .col12">
       <h1>Sign up!</h1>
       </div>
-      <form  className="sign-up-container" onSubmit={this.formSubmitted}>
+      <form onSubmit={this.formSubmitted}>
 
         
 

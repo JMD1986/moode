@@ -21,19 +21,21 @@ var UserPlaylist = React.createClass({
 
 			if(query === model.title){
 				return(
-					<div key={model.id}><iframe id="sc-widget" src={'https://w.soundcloud.com/player/?url='+model.url} width="400" height="465" scrolling="no" frameBorder="no"></iframe></div>
+					<div className="soundcloud-playlist" key={model.id}><iframe id="sc-widget" src={'https://w.soundcloud.com/player/?url='+model.url+'&visual=false&color=C63D0F'} width="100%" height="465" scrolling="no" frameBorder="no"></iframe></div>
 					)
 			}
 		});
 			
 		return(
 			<div>
-			<div></div>
-			<h1>User Playlist</h1>
-			<div className="box">
-			<p>words</p>
-			</div>
+				<div className="login-header" >
+					<h1>User Playlist</h1>
+				</div>
+				
+				<div className="playlist-holder">
 				{playlists}	
+				</div>
+
 				
 			</div>
 		);

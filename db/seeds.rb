@@ -27,10 +27,31 @@ playlists = Playlist.create(
   { user: "Tito", title: "I need a laugh", url: "https://soundcloud.com/mazemerizer/sets/standup", mood_id: 8},
   { user: "Ramona", title: "Night time tunes", url: "https://soundcloud.com/reecerance/sets/ambient-music", mood_id: 9}])
 
-users = User.create([{ name: "John", email: "Johndaugherty1986@gmail.com", imageurl: "http://i.imgur.com/tciLfzQ.jpg"},
-  {name: "Ramona", email: "bellamy2727@yahoo.com",  imageurl: "http://i.imgur.com/5A95Faw.jpg"},
-  {name: "Tito", email: "Tito@ilikebigbutts.org", imageurl: "http://i.imgur.com/4PgOxLr.jpg"},
-  {name: "Nikola Tesla", email: "Ilovescience@electricityisdope.com", imageurl:"http://www.teslasociety.com/pictures/pic1.jpg"}])
+users = User.create([{
+  name: "John",
+  email: "Johndaugherty1986@gmail.com",
+  password_digest: "hello",
+  bio: Faker::Lorem.paragraph(9),
+  imageurl: "http://i.imgur.com/tciLfzQ.jpg"},
+  {name: "Ramona",
+  email: "bellamy2727@yahoo.com",
+  password_digest: "hello",
+  bio: Faker::Lorem.paragraph(9),
+  imageurl: "http://i.imgur.com/5A95Faw.jpg"},
+  {name: "Tito",
+  password_digest: "hello",
+  bio: Faker::Lorem.paragraph(9),
+  email: "Tito@ilikebigbutts.org",
+  imageurl: "http://i.imgur.com/4PgOxLr.jpg"},
+  {name: "Nikola Tesla",
+  email: "Ilovescience@electricityisdope.com",
+  password_digest: "hello",
+  bio: "Serbian-American inventor Nikola Tesla was born in July of 1856, in what is now Croatia.
+  He came to the United States in 1884 and briefly worked with Thomas Edison before the two parted ways.
+  He sold several patent rights, including those to his alternating-current machinery,
+  to George Westinghouse. His 1891 invention, the Tesla Coil is still used in radio technology today.
+  Tesla died in New York City on January 7, 1943.",
+  imageurl:"http://www.teslasociety.com/pictures/pic1.jpg"}])
 
 100.times do
 

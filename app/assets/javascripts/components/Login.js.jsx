@@ -21,12 +21,6 @@ var Login = React.createClass({
               <div className="main-header">    
                 <h2>Login</h2>
               </div>        
-              <fieldset className="account-info">
-                    
-                    <h1 >Login</h1>
-                    <label>Username</label><br/>
-
-                 
                    
              
               <fieldset className="account-info">

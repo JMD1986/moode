@@ -17,16 +17,6 @@ moods = Mood.create([{mood: "Happy", url: "http://streetdose.com/wp-content/uplo
   {mood: "Tired", url: "https://c2.staticflickr.com/8/7310/8729154647_731ffd7576_b.jpg"}])
 #password?!!
 
-playlists = Playlist.create(
-  [{ user: "John", user_id: 1, title: "Burning down the house", url: "https://soundcloud.com/maddecent/sets/jeffrees-vol-6", mood_id: 5},
-  { user: "John", user_id: 1, title: "the house that funk built" , url: "https://soundcloud.com/joshua-kong/sets/chillstep", mood_id: 1},
-  { user: "John", user_id: 1 ,title: "Ayy Lmao", url: "https://soundcloud.com/sarbs/sets/comedy-bang-bang", mood_id: 8},
-  { user: "Ramona", title: "Coding mix", url: "https://soundcloud.com/victoria-feere/sets/coding-mix", mood_id: 4},
-  { user: "Ramona" , title: "May 2015 Austin Spring relaxation", url: "https://soundcloud.com/celestial_vibes/sets/summer-vibes-v2", mood_id: 1},
-  { user: "Tito" , title: "June good times playlist", url: "https://soundcloud.com/ngryullet/sets/reggae", mood_id: 4},
-  { user: "Tito", title: "I need a laugh", url: "https://soundcloud.com/mazemerizer/sets/standup", mood_id: 8},
-  { user: "Ramona", title: "Night time tunes", url: "https://soundcloud.com/reecerance/sets/ambient-music", mood_id: 9}])
-
 users = User.create([{
   name: "John",
   email: "Johndaugherty1986@gmail.com",
@@ -53,13 +43,21 @@ users = User.create([{
   Tesla died in New York City on January 7, 1943.",
   imageurl:"http://www.teslasociety.com/pictures/pic1.jpg"}])
 
-100.times do
+playlists = Playlist.create(
+  [{ user: "John", user_id: 1, title: "Burning down the house", url: "https://soundcloud.com/maddecent/sets/jeffrees-vol-6", mood_id: 5},
+  { user: "John", user_id: 1, title: "the house that funk built" , url: "https://soundcloud.com/joshua-kong/sets/chillstep", mood_id: 1},
+  { user: "John", user_id: 1 ,title: "Ayy Lmao", url: "https://soundcloud.com/sarbs/sets/comedy-bang-bang", mood_id: 8},
+  { user: "Ramona", user_id: 2, title: "Coding mix", url: "https://soundcloud.com/victoria-feere/sets/coding-mix", mood_id: 4},
+  { user: "Ramona", user_id: 2, title: "May 2015 Austin Spring relaxation", url: "https://soundcloud.com/celestial_vibes/sets/summer-vibes-v2", mood_id: 1},
+  { user: "Tito" , user_id: 3, title: "June good times playlist", url: "https://soundcloud.com/ngryullet/sets/reggae", mood_id: 4},
+  { user: "Tito", user_id: 3, title: "I need a laugh", url: "https://soundcloud.com/mazemerizer/sets/standup", mood_id: 8},
+  { user: "Ramona", user_id: 3, title: "Night time tunes", url: "https://soundcloud.com/reecerance/sets/ambient-music", mood_id: 9},
+  { user: "Tesla", user_id: 4, title: "Thomas Eddison is an asshole", url: "https://soundcloud.com/mazemerizer/sets/standup", mood_id: 8},
+])
 
-playlists = Playlist.create([{user: Faker::Name.name, mood_id: rand(1..9),
-                    url: "https://soundcloud.com/jordan-myers-22/sets/js-playlist",
-                    title: Faker::Lorem.sentence(1),
-                    imageurl: "http://i.imgur.com/5063SUw.png"
-          }])
+
+
+100.times do
 
 users = User.create([{
   name: Faker::Name.name,
@@ -68,4 +66,9 @@ users = User.create([{
   bio: Faker::Lorem.paragraph(9),
   imageurl: "http://i.imgur.com/J9fQX9e.jpg"}])
 
+playlists = Playlist.create([{ user: Faker::Name.name, mood_id: rand(1..9),
+                    url: "https://soundcloud.com/jordan-myers-22/sets/js-playlist",
+                    title: Faker::Lorem.sentence(1),
+                    imageurl: "http://i.imgur.com/5063SUw.png"
+          }])
 end

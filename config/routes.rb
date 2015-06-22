@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   get '/login', to: "sessions#new", as: 'login'
   post '/login', to: "sessions#create", as: 'create_session'
   get '/logout', to: "sessions#destroy", as: 'logout'
+  get '/userplaylists/:id', to: "users#playlists"
 
 #         Prefix Verb   URI Pattern                   Controller#Action
 #          moods GET    /moods(.:format)              moods#index
